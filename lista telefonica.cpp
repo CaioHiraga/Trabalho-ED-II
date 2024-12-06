@@ -168,15 +168,13 @@ void removerContato(char* nome) {
 void exibirContatos() {
     for (int i = 0; i < TAM; i++) {
         Contato* atual = tabela[i].lista;
-        if (atual != NULL) {
-            printf("Índice %d:\n", i);
-            while (atual != NULL) {
+        while (atual != NULL) {
                 printf("Nome: %s, Telefone: %s\n", atual->nome, atual->telefone);
                 atual = atual->proximo;
             }
         }
     }
-}
+
 
 int main() {
 	setlocale(LC_ALL, ""); 
